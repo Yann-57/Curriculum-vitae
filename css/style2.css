@@ -1,0 +1,251 @@
+@font-face {
+	font-family: LeagueSpartan;
+	src: url(league-spartan-master/webfonts/leaguespartan-bold.ttf);
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(roboto-condensed/RobotoCondensed-Bold.ttf);
+	src: url(roboto-condensed/RobotoCondensed-BoldItalic.ttf);
+	src: url(roboto-condensed/RobotoCondensed-Italic.ttf);
+	src: url(roboto-condensed/RobotoCondensed-Light.ttf);
+	src: url(roboto-condensed/RobotoCondensed-LightItalic.ttf);
+	src: url(roboto-condensed/RobotoCondensed-Regular.ttf);
+}
+
+@keyframes chevron-dynamic{
+    0%{margin: 0;}
+    50%{margin-bottom: 30px;}
+    100%{margin:0}
+}
+
+*{
+    margin: 0;
+  
+}
+
+body{ position: relative;}
+h1, h2, h3, h4{ font-family: LeagueSpartan;}
+h3, h4{ color: #aea282;}
+h1{ font-size: 3.5em;}
+h2{ font-size: 2em;}
+h3{text-align: center;}
+p{ text-align: justify; font-family: Roboto;}
+li{ font-family: Roboto;}
+a{ text-decoration: none; }
+hr{ margin-top: 40px; margin-bottom: 40px; }
+
+section{
+    position: relative;
+    padding: 0 25% 0 8%}
+
+article{
+    padding: 20px;
+}    
+
+.Titre_section{  
+  text-align: center;
+  padding-top: 50px;
+}    
+
+.citation{
+    text-align: center;
+    font-style: italic;
+    line-height: 25px;
+}
+
+section h2{
+    display: inline-block;
+    font-size: 3em;
+    font-weight: 1.5em;
+    background: rgb(237,221,178);
+    background: linear-gradient(90deg, rgba(237,221,178,1) 0%, rgba(174,162,130,0.9009978991596639) 33%, rgba(174,162,130,0.9009978991596639) 66%, rgba(237,221,178,1) 100%);
+    background-clip: text;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section h3{ margin-bottom: 1em;}
+
+section:nth-child(even){
+    background-color: rgb(233, 233, 233);
+}
+
+
+section:nth-child(even) h3{
+    color: black;
+    font-size: 1.8em;
+}
+
+section:nth-child(odd) h4, h3{
+	color: #aea282;
+}
+
+nav{ 
+    margin: 0 0 -390px 83vw;
+    width: 150px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5vh; 
+    z-index: 5;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 11px; 
+    padding: 0;
+    background-color: black;
+    border-radius: 11px;
+}
+
+nav li{
+    text-align: center;
+    align-content: center;
+}
+
+nav a{
+    position: relative;
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
+    display: block;
+    padding: 30px;
+    color: white;
+}
+
+nav a:hover{
+    text-decoration: none;
+    background: rgb(237,221,178);
+	background: linear-gradient(90deg, rgba(237,221,178,1) 0%, rgba(174,162,130,0.9009978991596639) 33%, rgba(174,162,130,0.9009978991596639) 66%, rgba(237,221,178,1) 100%);
+  
+}
+
+.description{
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+.premier_lien{
+    border-radius: 11px 11px 0 0 ;
+}
+
+.dernier_lien{
+    border-radius: 0 0 11px 11px;
+}
+
+.Acceuil{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/Users/yannberlingeri/Desktop/Medias/sunset.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.Calque{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.253);
+    width: 100vw;
+    height: 100vh;
+}
+
+.Main-Title{
+    padding-top: 40vh;
+   text-align: center;
+   color: rgb(255, 255, 255);
+}
+
+.chevron{
+    width: 150px;
+    height: 80px;
+    position: absolute;
+    left: 83vw;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 3px 3px 0 0;
+}
+
+.icon-chevron{ 
+    background-color: rgba(0, 0, 0, 0);
+    display: block;
+    text-align: center;
+    width: 150px;
+    position: absolute;
+    left: 83vw;
+    bottom: 0;
+    color: white;
+    font-size: 40px;
+    animation-name: chevron-dynamic;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+   
+}
+
+.Main-Title h2{ color: white;}
+
+.Sous-titre{ font-size: 1em;}
+
+#Profil{  max-width: 1280px;}
+
+#Profil article{
+    padding: 20px;
+    width: 30%;
+}
+
+#Profil h3{
+    text-align: center;
+}
+
+.flex-profil{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;  
+    margin-bottom: 20px; 
+}
+ 
+ .a-propos{
+     min-width: 190px;
+     border-radius: 10px;
+ }
+
+.image{
+    text-align: center;
+    min-width: 230px;  
+}
+
+.photo{
+    border:5px solid #aea282;
+    border-radius: 100%;
+}
+
+.details{
+    min-width: 190px;
+    border-radius: 10px;
+  
+}
+
+.details ul{
+    list-style-type: none;
+    text-align: left;
+    padding-left: 0;
+ }
+
+ .details li{
+     
+     margin-bottom: 1em;
+ }
+
+
+#Experiences article{
+    
+}
+   
+
+
+
+
+
+
+
