@@ -19,14 +19,11 @@
     100%{margin:0}
 }
 
-*{
-    margin: 0;
-  
-}
+*{margin: 0;}
 
 body{ position: relative;}
 h1, h2, h3, h4{ font-family: LeagueSpartan;}
-h3, h4{ color: #aea282;}
+h3{color: #aea282;}
 h1{ font-size: 3.5em;}
 h2{ font-size: 2em;}
 h3{text-align: center;}
@@ -37,7 +34,7 @@ hr{ margin-top: 40px; margin-bottom: 40px; }
 
 section{
     position: relative;
-    padding: 0 25% 0 8%}
+    padding: 0 25% 50px 8%}
 
 article{
     padding: 20px;
@@ -71,14 +68,9 @@ section:nth-child(even){
     background-color: rgb(233, 233, 233);
 }
 
-
 section:nth-child(even) h3{
     color: black;
-    font-size: 1.8em;
-}
-
-section:nth-child(odd) h4, h3{
-	color: #aea282;
+    font-size: 1.5em;
 }
 
 nav{ 
@@ -126,6 +118,7 @@ nav a:hover{
 .description{
     font-style: italic;
     margin-bottom: 1em;
+    color: #aea282;
 }
 
 .premier_lien{
@@ -139,7 +132,7 @@ nav a:hover{
 .Acceuil{
     width: 100vw;
     height: 100vh;
-    background-image: url(/Fil rouge 2/medias/sunset.jpg);
+    background-image: url(../medias/sunset.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -190,7 +183,6 @@ nav a:hover{
 #Profil{  max-width: 1280px;}
 
 #Profil article{
-    padding: 20px;
     width: 30%;
 }
 
@@ -241,11 +233,72 @@ nav a:hover{
 #Experiences article{
     
 }
-   
+.Sous_titre_section{
+    font-size: 2.5em;
+    font-weight: bold;
+    font-style: italic;
+    background: rgb(237,221,178);
+    background: linear-gradient(90deg, rgba(237,221,178,1) 0%, rgba(174,162,130,0.9009978991596639) 33%, rgba(174,162,130,0.9009978991596639) 66%, rgba(237,221,178,1) 100%);
+    background-clip: text;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
+.flex_competences{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.flex_competences article{
+    padding: 20px;
+    width: 30%;
+}   
+.flex_competences ul{
+    
+    text-align: left;
+}
 
+.flex_projets{
+    display: flex;
+    justify-content: space-around;
+}
 
+.projet{
+    width: 70vh;
+    height: 40vh;
+    padding: 0;
+    background-image: url(../medias/Site_kine.png);
+    border-radius: 11px;
+    background-size: cover;
+    
+}
 
+.calque_projet{
+    background-color: rgba(0, 0, 0, 0.205);
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+    display: none;
+}
 
+.description_projet{
+    background-color: rgba(0, 0, 0, 0.712);
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 11px 11px;
+}
+
+.description_projet a{
+    font-size: 2.5em ;
+    color: white;
+}
+
+.description_projet a:hover{color: rgba(255, 255, 255, 0.493);}
+
+.projet:hover .calque_projet{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
 
 
