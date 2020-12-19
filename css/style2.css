@@ -91,6 +91,7 @@ nav ul{
     padding: 0;
     background-color: black;
     border-radius: 11px;
+    
 }
 
 nav li{
@@ -301,4 +302,44 @@ nav a:hover{
     align-items:flex-end;
 }
 
+.social_medias{
+    text-align: center;
+}
 
+.social_medias a{
+    font-size: 36px;
+    margin: 0 10px 0 0;
+    color: white;
+    text-decoration: none;
+    background: #b7b6b600;
+    padding: 14px;
+    box-sizing: border-box;
+    width: 65px;
+    text-align: center;
+    border-radius: 50%;
+    transition: transform .2s;
+}
+
+.social_medias a:hover{
+    transform: scale(1.1);
+}
+
+.social_medias a.fa-linkedin-in{ 
+    background: rgb(13,124,252);
+    background: linear-gradient(0deg, rgba(13,124,252,1) 0%, rgba(0,194,253,1) 100%);
+}
+
+.social_medias a.fa-instagram{
+    background: rgb(241,72,115);
+    background: linear-gradient(0deg, rgba(241,72,115,1) 0%, rgba(86,6,200,1) 100%);
+}
+
+.social_medias a.fa-facebook-f{
+    background: rgb(0,93,249);
+    background: linear-gradient(0deg, rgba(0,93,249,1) 0%, rgba(15,59,163,1) 100%);
+}
+
+.social_medias a.fa-envelope{
+    background: rgba(0,194,253);
+    background: linear-gradient(0deg, rgba(0,194,253,1) 0%, rgba(13,124,252,1) 100%);
+}
