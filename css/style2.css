@@ -1,16 +1,16 @@
 @font-face {
 	font-family: LeagueSpartan;
-	src: url(league-spartan-master/webfonts/leaguespartan-bold.ttf);
+	src: url(fonts/league-spartan-master/webfonts/leaguespartan-bold.ttf);
 }
 
 @font-face {
 	font-family: Roboto;
-	src: url(roboto-condensed/RobotoCondensed-Bold.ttf);
-	src: url(roboto-condensed/RobotoCondensed-BoldItalic.ttf);
-	src: url(roboto-condensed/RobotoCondensed-Italic.ttf);
-	src: url(roboto-condensed/RobotoCondensed-Light.ttf);
-	src: url(roboto-condensed/RobotoCondensed-LightItalic.ttf);
-	src: url(roboto-condensed/RobotoCondensed-Regular.ttf);
+	src: url(fonts/roboto-condensed/RobotoCondensed-Bold.ttf);
+	src: url(fonts/roboto-condensed/RobotoCondensed-BoldItalic.ttf);
+	src: url(fonts/roboto-condensed/RobotoCondensed-Italic.ttf);
+	src: url(fonts/roboto-condensed/RobotoCondensed-Light.ttf);
+	src: url(fonts/roboto-condensed/RobotoCondensed-LightItalic.ttf);
+	src: url(fonts/roboto-condensed/RobotoCondensed-Regular.ttf);
 }
 
 @keyframes chevron-dynamic{
@@ -231,9 +231,6 @@ nav a:hover{
  }
 
 
-#Experiences article{
-    
-}
 .Sous_titre_section{
     font-size: 2.5em;
     font-weight: bold;

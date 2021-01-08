@@ -1,0 +1,371 @@
+@import "bootstrap/scss/bootstrap.scss";
+
+
+// Polices de caracteres utilisées 
+
+@font-face {
+	font-family: LeagueSpartan;
+	src: url(fonts/league-spartan-master/webfonts/leaguespartan-bold.ttf);
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/roboto-condensed/RobotoCondensed-Bold.ttf);
+	src: url(fonts/roboto-condensed/RobotoCondensed-BoldItalic.ttf);
+	src: url(fonts/roboto-condensed/RobotoCondensed-Italic.ttf);
+	src: url(fonts/roboto-condensed/RobotoCondensed-Light.ttf);
+	src: url(fonts/roboto-condensed/RobotoCondensed-LightItalic.ttf);
+	src: url(fonts/roboto-condensed/RobotoCondensed-Regular.ttf);
+}
+
+// Animations 
+
+@keyframes chevron-dynamic{
+    0%{margin: 0;}
+    50%{margin-bottom: 30px;}
+    100%{margin:0}
+}
+
+// Variables
+
+$primary_color:#aea282;
+$secondary_color: white;
+
+
+
+
+// Mixins
+
+@mixin gradient {
+    background: rgb(237,221,178);
+    background: linear-gradient(90deg, rgba(237,221,178,1) 0%, rgba(174,162,130,0.9009978991596639) 33%, rgba(174,162,130,0.9009978991596639) 66%, rgba(237,221,178,1) 100%);
+}
+
+
+// Menu de navigation (classes bootstrap modifiées)
+
+.navbar{                         /* bloc contenant le menu de navigation */
+    margin: 0 0 -420px 83vw;
+    position: -webkit-sticky;
+    width: 100px;
+    position: sticky;
+    top: 5vh; 
+    z-index:999;
+}
+
+
+.nav {
+    list-style-type: none;      /* liste du menu de navigation */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 7px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.849);
+    
+    &-link{                      /* elements de types liens du menu */
+        position: relative; 
+        text-align: center;
+        align-content: center;
+        font-weight: bold;
+        display: block;
+        padding: 30px 15px 30px 15px;
+        color: $secondary_color;
+    
+        &:hover{
+            color: $primary_color;
+        }
+
+    }
+    &-pills{
+
+        .nav-link.active{                /* Lien de menu actif */
+            @include gradient();
+            border-radius: 7px;
+        }
+    }
+}
+
+
+*{margin: 0;}
+body{ position: relative;}
+h1, h2, h3, h4{ font-family: 'LeagueSpartan';}
+h3{color: $primary_color;}
+h1{ font-size: 3.5em;}
+h2{ font-size: 2em;}
+h3{text-align: center;}
+p{ font-family: 'Roboto';}
+li{ font-family: 'Roboto';}
+a{ text-decoration: none;
+    &:hover{
+        color: $primary_color;
+    }
+ }
+hr{ margin: 2em 0 2em 0; }
+
+section{
+    position: relative;
+    padding: 0 25% 50px 8%;
+    h2 {
+        display: inline-block;
+        font-size: 3em;
+        font-weight: 1.5em;
+        @include gradient();
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    h3 { margin-bottom: 1em;}
+    &:nth-child(even){
+        background-color: rgb(233, 233, 233);
+        h3{
+            color: black;
+            font-size: 1.5em;
+        }
+    }
+}
+
+article{
+    padding: 20px;
+}    
+
+.Titre_section{  
+  text-align: center;
+  padding-top: 50px;
+}    
+
+.citation{
+    text-align: center;
+    font-style: italic;
+    line-height: 25px;
+}
+
+
+
+
+.description{
+    font-style: italic;
+    margin-bottom: 1em;
+    color: $primary_color ;
+}
+
+.premier_lien{
+    border-radius: 11px 11px 0 0 ;
+}
+
+.dernier_lien{
+    border-radius: 0 0 11px 11px;
+}
+
+.Acceuil{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../medias/sunset.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.Calque{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.253);
+    width: 100vw;
+    height: 100vh;
+}
+
+.Main-Title{
+    padding-top: 40vh;
+   text-align: center;
+   color: $secondary_color;
+}
+
+.chevron{
+    width: 124px;
+    height: 80px;
+    position: absolute;
+    left: 83vw;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 3px 3px 0 0;
+}
+
+.icon-chevron{ 
+    background-color: rgba(0, 0, 0, 0);
+    display: block;
+    text-align: center;
+    width: 124px;
+    position: absolute;
+    left: 83vw;
+    bottom: 0;
+    color: white;
+    font-size: 40px;
+    animation-name: chevron-dynamic;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+   
+}
+
+.Main-Title h2{ color: $secondary_color;}
+
+.Sous-titre{ font-size: 1em;}
+
+#Profil{  
+    max-width: 1280px;
+    }
+
+#Profil article{
+    width: 30%;
+}
+
+#Profil h3{
+    text-align: center;
+}
+
+.flex-profil{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;  
+    margin-bottom: 20px; 
+}
+ 
+ .a-propos{
+     min-width: 190px;
+     border-radius: 10px;
+ }
+
+.image{
+    text-align: center;
+    min-width: 230px;  
+}
+
+.photo{
+    border:5px solid $primary_color;
+    border-radius: 100%;
+}
+
+.details{
+    min-width: 190px;
+    border-radius: 10px;
+  
+}
+
+.details ul{
+    list-style-type: none;
+    text-align: left;
+    padding-left: 0;
+ }
+
+ .details li{
+     
+     margin-bottom: 1em;
+ }
+
+
+.Sous_titre_section{
+    font-size: 2.5em;
+    font-weight: bold;
+    font-style: italic;
+    @include gradient();
+    background-clip: text;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.flex_competences{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.flex_competences article{
+    padding: 20px;
+    width: 30%;
+}   
+.flex_competences ul{
+    
+    text-align: left;
+}
+
+.flex_projets{
+    display: flex;
+    justify-content: space-around;
+}
+
+.projet{
+    width: 70vh;
+    height: 40vh;
+    padding: 0;
+    background-image: url(../medias/Site_kine.png);
+    border-radius: 11px;
+    background-size: cover;
+    
+}
+
+.calque_projet{
+    background-color: rgba(0, 0, 0, 0.205);
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+    display: none;
+}
+
+.description_projet{
+    background-color: rgba(0, 0, 0, 0.712);
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 11px 11px;
+}
+
+.description_projet a{
+    font-size: 2.5em ;
+    color: $secondary_color;
+}
+
+.description_projet a:hover{color: rgba(255, 255, 255, 0.493);}
+
+.projet:hover .calque_projet{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+
+.social-medias{      /* Icones de réseaux sociaux */
+    text-align: center;
+
+    &__link {
+        font-size: 36px;
+        margin: 0 10px 0 0;
+        color: $secondary_color;
+        text-decoration: none;
+        background: #b7b6b600;
+        padding: 14px;
+        box-sizing: border-box;
+        width: 65px;
+        text-align: center;
+        border-radius: 50%;
+        transition: transform .2s;
+
+        &.fa-linkedin-in{ 
+            background: rgb(13,124,252);
+            background: linear-gradient(0deg, rgba(13,124,252,1) 0%, rgba(0,194,253,1) 100%);
+        }
+
+        &.fa-instagram{
+            background: rgb(241,72,115);
+            background: linear-gradient(0deg, rgba(241,72,115,1) 0%, rgba(86,6,200,1) 100%);
+        }
+
+        &.fa-facebook-f{
+            background: rgb(0,93,249);
+            background: linear-gradient(0deg, rgba(0,93,249,1) 0%, rgba(15,59,163,1) 100%);
+        }
+
+        &.fa-envelope{
+            background: rgb(0,194,253);
+            background: linear-gradient(0deg, rgba(0,194,253,1) 0%, rgba(13,124,252,1) 100%);
+        }
+
+        &:hover{
+            transform: scale(1.1);   
+            color: $secondary_color; 
+        }
+    }
+}

@@ -2,34 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style2.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> 
     <script src="https://kit.fontawesome.com/1113866417.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+    </script>
     <title>Document</title>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" tabindex="0">
 
     <div class="Acceuil">
-        <div class="Calque">s
-
+        <div class="Calque">
             <div class="Main-Title">
                 <h1>YANN BERLINGERI</h1>
-                <h2 class="Sous-titre">Curriculum Interractif</h2>
+                <h2 class="Sous-titre">Developpeur Junior</h2>
             </div>
-
             <div class="chevron"></div>
             <a class="icon-chevron" href="#Profil"><i class="fas fa-chevron-down"></i></a>
         </div>
     </div>
 
-    <nav>
-        <ul>
-            <li><a class="premier_lien" href="#Profil">Profil</a></li>
-            <li><a href="#Experiences">Experiences</a></li>
-            <li><a href="#Competences">Compétences</a></li>
-            <li><a href="#Projets">Projets</a></li>
-            <li><a class="dernier_lien" href="#Contact">Contact</a></li>
+    <nav class="navbar naxbar-expand-md sticky-top py-0">
+        <ul id="navbar-example2" class="nav nav-pills flex-column">
+            <li class="nav-item"><a class="nav-link" href="#Profil">Profil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Experiences">Experiences</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Competences">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Projets">Projets</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -192,11 +218,11 @@
             <p class="citation"></p>
         </div>
         <hr>
-        <div class="social_medias">
-            <a href="http://linkedin.fr" class="fab fa-linkedin-in"></a>
-            <a href="http://instagram.fr" class="fab fa-instagram"></a>
-            <a href="http://facebook.fr" class="fab fa-facebook-f"></a>
-            <a href="mailto:yann-berlingeri@hotmail.fr" class="fas fa-envelope"></a>
+        <div class="social-medias">
+            <a href="http://linkedin.fr" class="social-medias__link fab fa-linkedin-in"></a>
+            <a href="http://instagram.fr" class="social-medias__link fab fa-instagram"></a>
+            <a href="http://facebook.fr" class="social-medias__link fab fa-facebook-f"></a>
+            <a href="mailto:yann-berlingeri@hotmail.fr" class="social-medias__link fas fa-envelope"></a>
         </div>
     </section>
 
